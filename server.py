@@ -32,7 +32,7 @@ while True:
         elif data.lower() == "exit" or data.lower() == "quit":
             conn.send("bye~ ^^".encode('utf-8'))
             break
-        elif data.lower() == "help" or x[0].lower() == "help":
+        elif data.lower() == "help":
             conn.send(help_r.encode('utf-8'))
         elif data == "geronyl":
             conn.send("i love you Leah <3"+"\n".encode('utf-8'))
