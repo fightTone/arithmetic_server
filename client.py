@@ -24,6 +24,6 @@ while True:
 				print (from_server.decode('utf-8'))
 		else:
 			print (from_server.decode('utf-8'))
-		# if npt.lower() == "quit" or npt.lower() == "exit":
-		# 	break
+		if npt.lower() == "quit" or npt.lower() == "exit":
+			break
 	client.close()
