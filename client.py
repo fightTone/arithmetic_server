@@ -18,12 +18,12 @@ while True:
 	print (from_server.decode('utf-8'))
 	npt = raw_input("enter command: ")
 	client.send(npt.encode('utf-8'))
-	
+	from_server = client.recv(4096)
 	if npt ==  'geronyl':
 		while True:
 			print (from_server.decode('utf-8'))
-
-		
+	else:
+		print (from_server.decode('utf-8'))
 	# if npt.lower() == "quit" or npt.lower() == "exit":
 	# 	break
 	client.close()
