@@ -14,6 +14,9 @@ help_r = '''
 	>>quit or exit [to stop the process]
 
 '''
+conn, addr = serv.accept()
+conn.send("Hello Welcome to Arithmetic Server.\n")
+conn.close()
 while True:
     print "waiting for connection..."
     conn, addr = serv.accept()
@@ -28,6 +31,7 @@ while True:
             conn.send(str(addresses)+"\n".encode('utf-8'))
         elif data.lower() == "exit" or x[0].lower() == "exit" or data.lower() == "quit" or x[0].lower() == "quit":
             conn.send("bye~ ^^".encode('utf-8'))
+            conn.close()
         elif data.lower() == "help" or x[0].lower() == "help":
             conn.send(help_r.encode('utf-8'))
         elif data == "geronyl":
