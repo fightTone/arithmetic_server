@@ -1,7 +1,7 @@
 import socket
 addresses = []
 serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serv.bind(('0.0.0.0', 14399))
+serv.bind(('0.0.0.0', 14499))
 serv.listen(5)
 commandlist=['add', 'mul', 'div', 'sub']
 help_r = '''
