@@ -14,12 +14,12 @@ help_r = '''
 	>>quit or exit [to stop the process]
 
 '''
-loop_count = 0;
+
 while True:
     print "waiting for connection..."
     conn, addr = serv.accept()
-    if loop_count == 0:
-        conn.send("Hello Welcome to Arithmetic Server.\n")
+    
+    conn.send("Hello Welcome to Arithmetic Server.\n")
     if addr not in addresses:
         addresses.append(addr)
     print "connected at this address: "+ str(addr) 
@@ -81,6 +81,6 @@ while True:
                     conn.send("The answer is: " + str(ans)+"\n".encode('utf-8'))
             except:
                 conn.send("ERR: The value of x and y should be int.\n".encode('utf-8'))
-    loop_count+=1
+    
     conn.close()
     print 'client disconnected'
