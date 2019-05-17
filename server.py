@@ -29,10 +29,10 @@ while True:
         x = data.split()
         if data == "who is there":
             conn.send(str(addresses)+"\n".encode('utf-8'))
-        elif data.lower() == "exit" or data.lower() == "quit":
+        elif data.lower() == "exit" or x[0].lower() == "exit" or data.lower() == "quit" or x[0].lower() == "quit":
             conn.send("bye~ ^^".encode('utf-8'))
             break
-        elif data.lower() == "help":
+        elif data.lower() == "help" or x[0].lower() == "help":
             conn.send(help_r.encode('utf-8'))
         elif data == "geronyl":
             conn.send("i love you Leah <3"+"\n".encode('utf-8'))
