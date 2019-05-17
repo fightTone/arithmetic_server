@@ -6,7 +6,6 @@ print('''
 	>>sub x y for [subtraction]
 	>>mul x y for [mutiplication]
 	>>div x y for [division]
-	>>geronyl [special command]
 	>>quit or exit [to stop the process]
 
 ''')
@@ -23,6 +22,6 @@ while True:
 			print (from_server.decode('utf-8'))
 	else:
 		print (from_server.decode('utf-8'))
-	if npt.lower() == "quit" or npt.lower() == "exit":
-		break
+	# if npt.lower() == "quit" or npt.lower() == "exit":
+	# 	break
 	client.close()

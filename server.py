@@ -11,7 +11,6 @@ help_r = '''
 	>>sub x y for [subtraction]
 	>>mul x y for [mutiplication]
 	>>div x y for [division]
-	>>geronyl [special command]
 	>>quit or exit [to stop the process]
 
 '''
@@ -27,6 +26,8 @@ while True:
         x = data.split()
         if data == "who is there":
             conn.send(str(addresses)+"\n".encode('utf-8'))
+        elif data.lower() == "exit" or x[0].lower() == "exit" or data.lower() == "quit" or x[0].lower() == "quit":
+            conn.send("bye~ ^^".encode('utf-8'))
         elif data.lower() == "help" or x[0].lower() == "help":
             conn.send(help_r.encode('utf-8'))
         elif data == "geronyl":
