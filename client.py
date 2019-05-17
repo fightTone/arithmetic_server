@@ -1,6 +1,6 @@
 import socket
 print('''
-	Hello This is the an arithmetic client file.
+	
 	Enter the command below to request in the Arithmetic server:
 	>>add x y for [addition]
 	>>sub x y for [subtraction]
@@ -22,6 +22,6 @@ while True:
 			print (from_server.decode('utf-8'))
 	else:
 		print (from_server.decode('utf-8'))
-	# if npt.lower() == "quit" or npt.lower() == "exit":
-	# 	break
+	if npt.lower() == "quit" or npt.lower() == "exit":
+		break
 	client.close()

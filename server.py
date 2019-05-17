@@ -31,7 +31,7 @@ while True:
             conn.send(str(addresses)+"\n".encode('utf-8'))
         elif data.lower() == "exit" or x[0].lower() == "exit" or data.lower() == "quit" or x[0].lower() == "quit":
             conn.send("bye~ ^^".encode('utf-8'))
-            conn.close()
+            break
         elif data.lower() == "help" or x[0].lower() == "help":
             conn.send(help_r.encode('utf-8'))
         elif data == "geronyl":
