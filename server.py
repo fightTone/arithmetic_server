@@ -5,7 +5,7 @@ serv.bind(('0.0.0.0', 14399))
 serv.listen(5)
 commandlist=['add', 'mul', 'div', 'sub']
 help_r = '''
-	Hello This is the an arithmetic client file.
+	
 	Enter the command below to request in the Arithmetic server:
 	>>add x y for [addition]
 	>>sub x y for [subtraction]
