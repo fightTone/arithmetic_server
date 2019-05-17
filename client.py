@@ -13,7 +13,7 @@ print('''
 
 while True:
 	client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	client.connect(('210.213.231.10', 14499))
+	client.connect(('210.213.231.10', 44499))
 	npt = raw_input("enter command: ")
 	client.send(npt.encode('utf-8'))
 	from_server = client.recv(4096)
