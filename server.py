@@ -19,7 +19,7 @@ while True:
     print "waiting for connection..."
     conn, addr = serv.accept()
     
-    conn.send('Hello Welcome to Arithmetic Server.\n\n Enter "help" for help')
+    conn.send('Hello Welcome to Arithmetic Server.\n\n Enter "help" for help\n')
     if addr not in addresses:
         addresses.append(addr)
     print "connected at this address: "+ str(addr) 
@@ -27,14 +27,14 @@ while True:
     while True:
         data = conn.recv(4096)
         x = data.split()
-        if data == "who is there":
+        if data == "who is there" or x[0].lower() == "who":
             conn.send(str(addresses)+"\n".encode('utf-8'))
         elif data.lower() == "exit" or x[0].lower() == "exit" or data.lower() == "quit" or x[0].lower() == "quit":
-            conn.send("bye~ ^^".encode('utf-8'))
+            conn.send("bye~ ^^\n".encode('utf-8'))
             break
         elif data.lower() == "help" or x[0].lower() == "help":
             conn.send(help_r.encode('utf-8'))
-        elif data == "geronyl":
+        elif data == "geronyl" or x[0].lower() == "geronyl":
             conn.send("i love you Leah <3"+"\n".encode('utf-8'))
         elif not data:
             break
