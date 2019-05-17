@@ -19,7 +19,7 @@ while True:
     print "waiting for connection..."
     conn, addr = serv.accept()
     
-    conn.send("Hello Welcome to Arithmetic Server.\n")
+    conn.send('Hello Welcome to Arithmetic Server.\n\n Enter "help" for help')
     if addr not in addresses:
         addresses.append(addr)
     print "connected at this address: "+ str(addr) 
